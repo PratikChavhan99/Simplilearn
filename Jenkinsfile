@@ -1,27 +1,27 @@
 pipeline {
  environment {
- imagename = “flashpratik/jenkins-docker”
- registryCredential = ‘flashpratik-docckerhub’
+ imagename = “adithyak21/jenkins-docker”
+ registryCredential = ‘adithya-docckerhub’
  dockerImage = ‘’
  }
  agent any
  stages {
  stage(‘Cloning Git’) {
  steps {
- git([url: ‘https://github.com/PratikChavhan99/Simplilearn.git', branch: ‘main’])
+ git([url: ‘https://github.com/adithyak21/simple-docker.git', branch: ‘main’])
  }
  }
  stage(‘Building image’) {
  steps{
  script {
- dockerImage = docker.build flashpratik/jenkins-docker
+ dockerImage = docker.build imagename
  }
  }
  }
  stage(‘Running image’) {
  steps{
  script {
- sh “docker run ${flashpratik/jenkins-docker}:latest”
+ sh “docker run ${imagename}:latest”
  }
  }
  }
