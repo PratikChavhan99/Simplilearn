@@ -1,7 +1,7 @@
 pipeline {
  environment {
- imagename = “adithyak21/jenkins-docker”
- registryCredential = ‘adithya-docckerhub’
+ imagename = “flashpratik/jenkins-docker”
+ registryCredential = ‘flashpratik-docckerhub’
  dockerImage = ‘’
  }
  agent any
