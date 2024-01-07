@@ -6,7 +6,7 @@ pipeline {
  }
  agent any
  stages {
- stage(‘Cloning git’) {
+ stage(‘Clone repo’) {
  steps{
  git([url: ‘https://github.com/PratikChavhan99/Simplilearn.git', branch: ‘main’])    
  }
