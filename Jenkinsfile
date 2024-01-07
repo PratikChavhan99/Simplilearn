@@ -14,14 +14,14 @@ pipeline {
  stage(‘Building image’) {
  steps{
  script {
- dockerImage = docker.build imagename
+ dockerImage = docker.build flashpratik/jenkins-docker
  }
  }
  }
  stage(‘Running image’) {
  steps{
  script {
- sh “docker run ${imagename}:latest”
+ sh “docker run ${flashpratik/jenkins-docker}:latest”
  }
  }
  }
